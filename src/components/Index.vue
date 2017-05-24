@@ -1,6 +1,7 @@
 <template>
   <div class="welcome">
-    INDEX PAGE
+    <a href="#/seed">SEED</a>
+    <a href="#/farmer">FARMER</a>
   </div>
 </template>
 
@@ -14,7 +15,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 </style>

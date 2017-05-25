@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'QuizIntro'
+  name: 'SectionIntro'
 }
 </script>
 

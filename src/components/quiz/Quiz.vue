@@ -1,8 +1,9 @@
 <template>
   <div>
     <Navigation/>
-    <QuizIntro
+    <SectionIntro
       v-if="step === 0"
+      :content="quizIntro"
     />
     <QuizContent
       v-else-if="step === 1"
@@ -13,18 +14,19 @@
 
 <script>
 import Navigation from '../common/Navigation.vue'
-import QuizIntro from './QuizIntro.vue'
+import SectionIntro from '../common/SectionIntro.vue'
 import QuizContent from './QuizContent.vue'
 export default {
   name: 'Quiz',
   data () {
     return {
-      step: 0
+      step: 0,
+      quizIntro: 'Use this brief 18-question automated quiz to help you determine if your friend may need to see a mental health professional for diagnosis and treatment of depression.'
     }
   },
   components: {
     Navigation,
-    QuizIntro,
+    SectionIntro,
     QuizContent
   },
   methods: {

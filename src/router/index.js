@@ -5,7 +5,12 @@ import Index from '@/components/Index'
 import Farmer from '@/components/Farmer'
 
 import Quiz from '@/components/quiz/Quiz'
+
 import Psychological from '@/components/psychological/Psychological'
+import UnderDepression from '@/components/psychological/UnderDepression'
+import TreatmentOptions from '@/components/psychological/TreatmentOptions'
+import FAQ from '@/components/psychological/FAQ'
+
 import Tips from '@/components/tips/Tips'
 import Science from '@/components/science/Science'
 
@@ -33,6 +38,18 @@ export default new Router({
     path: '/psychological',
     name: 'Psychological',
     component: Psychological
+  }, {
+    path: '/psychological/underDepression',
+    name: 'UnderDepression',
+    component: UnderDepression
+  }, {
+    path: '/psychological/treatmentOptions',
+    name: 'TreatmentOptions',
+    component: TreatmentOptions
+  }, {
+    path: '/psychological/faq',
+    name: 'FAQ',
+    component: FAQ
   }, {
     path: '/tips',
     name: 'Tips',

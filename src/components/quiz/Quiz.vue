@@ -1,13 +1,20 @@
 <template>
   <div>
-    <Menu></Menu>
-    <QuizIntro v-if="step===0"></QuizIntro>
+    <Navigation/>
+    <QuizIntro
+      v-if="step === 0"
+    />
+    <QuizContent
+      v-else-if="step === 1"
+    />
+    <div v-if="step === 0" v-on:click="setStep">GO</div>
   </div>
 </template>
 
 <script>
-import Menu from '../common/Menu.vue'
+import Navigation from '../common/Navigation.vue'
 import QuizIntro from './QuizIntro.vue'
+import QuizContent from './QuizContent.vue'
 export default {
   name: 'Quiz',
   data () {
@@ -16,18 +23,18 @@ export default {
     }
   },
   components: {
-    Menu,
-    QuizIntro
+    Navigation,
+    QuizIntro,
+    QuizContent
   },
   methods: {
-    setStep: function (step) {
-      this.step = step
+    setStep: function () {
+      this.step = 1
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 </style>

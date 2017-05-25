@@ -1,16 +1,16 @@
 <template>
 <div>
-  <Menu></Menu>
+  <Navigation/>
   <div>tips</div>
 </div>
 </template>
 
 <script>
-import Menu from '../common/Menu.vue'
+import Navigation from '../common/Navigation.vue'
 export default {
   name: 'Tips',
   components: {
-    Menu
+    Navigation
   },
   methods: {
   }

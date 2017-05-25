@@ -1,17 +1,12 @@
 <template>
   <div>
-    <Navigation/>
-    <div>  Science </div>
+    <div>测试结果：健康</div>
   </div>
 </template>
 
 <script>
-import Navigation from '../common/Navigation.vue'
 export default {
-  name: 'Science',
-  components: {
-    Navigation
-  }
+  name: 'QuizResult'
 }
 </script>
 

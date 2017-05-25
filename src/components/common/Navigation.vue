@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'Menu',
+  name: 'Navigation',
   data () {
     return {
       toggle: true

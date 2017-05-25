@@ -1,10 +1,17 @@
 <template>
-  <div>  Science </div>
+  <div>
+    <Menu></Menu>
+    <div>  Science </div>
+  </div>
 </template>
 
 <script>
+import Menu from '../common/Menu.vue'
 export default {
-  name: 'Science'
+  name: 'Science',
+  components: {
+    Menu
+  }
 }
 </script>
 

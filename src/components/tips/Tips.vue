@@ -1,11 +1,16 @@
 <template>
-<div>tips</div>
+<div>
+  <Menu></Menu>
+  <div>tips</div>
+</div>
 </template>
 
 <script>
+import Menu from '../common/Menu.vue'
 export default {
   name: 'Tips',
   components: {
+    Menu
   },
   methods: {
   }

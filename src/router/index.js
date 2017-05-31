@@ -4,6 +4,8 @@ import Hello from '@/components/Hello'
 import Index from '@/components/Index'
 import Farmer from '@/components/Farmer'
 
+import Article from '@/components/common/Article'
+
 import Quiz from '@/components/quiz/Quiz'
 
 import Psychological from '@/components/psychological/Psychological'
@@ -12,6 +14,9 @@ import TreatmentOptions from '@/components/psychological/TreatmentOptions'
 import FAQ from '@/components/psychological/FAQ'
 
 import Tips from '@/components/tips/Tips'
+import Medicine from '@/components/tips/Medicine'
+import PhysicsTherapy from '@/components/tips/PhysicsTherapy'
+
 import Science from '@/components/science/Science'
 
 Vue.use(Router)
@@ -39,9 +44,13 @@ export default new Router({
     name: 'Psychological',
     component: Psychological
   }, {
-    path: '/psychological/underDepression',
+    path: '/psychological/underDepression/',
     name: 'UnderDepression',
     component: UnderDepression
+  }, {
+    path: '/psychological/underDepression/:id',
+    name: Article,
+    component: Article
   }, {
     path: '/psychological/treatmentOptions',
     name: 'TreatmentOptions',
@@ -54,6 +63,18 @@ export default new Router({
     path: '/tips',
     name: 'Tips',
     component: Tips
+  }, {
+    path: '/tips/medicine',
+    name: 'Medicine',
+    component: Medicine
+  }, {
+    path: '/tips/medicine/:id',
+    name: 'Article',
+    component: Article
+  }, {
+    path: '/tips/physicsTherapy',
+    name: 'PhysicsTherapy',
+    component: PhysicsTherapy
   }, {
     path: '/science',
     name: 'Science',

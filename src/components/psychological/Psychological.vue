@@ -2,11 +2,11 @@
   <div>
     <Navigation/>
     <SectionIntro
-      v-if="step === 0"
+      v-if="!$route.query.step"
       :content="psychologicalIntro"
     />
-    <div v-if="step === 0" v-on:click="handleStep">GO</div>
-    <ul v-else-if="step === 1">
+    <a v-if="!$route.query.step" v-on:click="handleStep">GO</a>
+    <ul v-else="$route.query.step === '1'">
       <li><a href="#/psychological/underDepression">UnderDepression</a></li>
       <li><a href="#/psychological/treatmentOptions">TreatmentOptions</a></li>
       <li><a href="#/psychological/faq">FAQ</a></li>
@@ -21,7 +21,7 @@ export default {
   name: 'Psychological',
   data () {
     return {
-      step: 0,
+      step: this.$route.query.step,
       psychologicalIntro: 'The most sensible way to lower rates of depression is...to spread accurate information among the general public about what depression is '
     }
   },

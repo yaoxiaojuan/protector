@@ -5,10 +5,9 @@
     v-if="!$route.query.step"
     :content="introContent"
   />
-  <a v-if="!$route.query.step" href="#/tips?step=1">GO</a>
+  <a v-if="!$route.query.step" href="#/tips/physicsTherapy?step=1">GO</a>
   <ul v-else="$route.query.step === '1'">
-    <li><a href="#/tips/medicine">MEDICINE</a></li>
-    <li><a href="#/tips/physicsTherapy">PHYSICS THERAPY</a></li>
+    <li>时间轴的内容</li>
   </ul>
 </div>
 </template>
@@ -17,10 +16,10 @@
 import Navigation from '../common/Navigation.vue'
 import SectionIntro from '../common/SectionIntro.vue'
 export default {
-  name: 'Tips',
+  name: 'PhysicsTherapy',
   data () {
     return {
-      introContent: 'Dopamine is the human happiness factor'
+      introContent: '时间轴的介绍'
     }
   },
   components: {

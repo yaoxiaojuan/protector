@@ -17,8 +17,6 @@ import Tips from '@/components/tips/Tips'
 import Medicine from '@/components/tips/Medicine'
 import PhysicsTherapy from '@/components/tips/PhysicsTherapy'
 
-import Science from '@/components/science/Science'
-
 Vue.use(Router)
 
 // TODO: 研究下eslint和jsformat,js后面加；
@@ -75,9 +73,5 @@ export default new Router({
     path: '/tips/physicsTherapy',
     name: 'PhysicsTherapy',
     component: PhysicsTherapy
-  }, {
-    path: '/science',
-    name: 'Science',
-    component: Science
   }]
 })

@@ -32,7 +32,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
   @-webkit-keyframes leftHeart
   {
     0% {margin-left: 20rem;}
@@ -55,16 +55,16 @@ export default {
     width: 7rem;
     background: url(../assets/heart.png) no-repeat center;
     background-size: 100%;
-  }
-  .heart.left{
-    left: 50%;
-    -webkit-animation: leftHeart 4s;
-    margin-left: -2rem;
-  }
-  .heart.right{
-    right: 50%;
-    -webkit-animation: rightHeart 2s;
-    margin-right: -2rem;
+    &.left{
+      left: 50%;
+      -webkit-animation: leftHeart 4s;
+      margin-left: -2rem;
+    }
+    $.right{
+      right: 50%;
+      -webkit-animation: rightHeart 2s;
+      margin-right: -2rem;
+    }
   }
   .seed{
     width: 5rem;

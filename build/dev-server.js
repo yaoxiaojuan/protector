@@ -83,6 +83,11 @@ var server = app.listen(port)
 
 module.exports = {
   ready: readyPromise,
+  vue: {
+    loaders: {
+      scss: ['vue-style-loader','css', 'sass'].join('!')
+    }
+  },
   close: () => {
     server.close()
   }

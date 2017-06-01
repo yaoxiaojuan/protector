@@ -2,13 +2,13 @@
   <div>
     <Navigation/>
     <SectionIntro
-      v-if="step === 0"
+      v-if="!$route.query.step"
       :content="quizIntro"
     />
     <QuizContent
-      v-else-if="step === 1"
+      v-else-if="$route.query.step === '1'"
     />
-    <div v-if="step === 0" v-on:click="setStep">GO</div>
+    <a v-if="!$route.query.step" href="#/quiz?step=1">GO</a>
   </div>
 </template>
 

@@ -60,7 +60,7 @@ export default {
       -webkit-animation: leftHeart 4s;
       margin-left: -2rem;
     }
-    $.right{
+    &.right{
       right: 50%;
       -webkit-animation: rightHeart 2s;
       margin-right: -2rem;

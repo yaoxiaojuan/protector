@@ -5,7 +5,7 @@
       v-if="!$route.query.step"
       :content="psychologicalIntro"
     />
-    <a v-if="!$route.query.step" v-on:click="handleStep">GO</a>
+    <a v-if="!$route.query.step" href="#/psychological?step=1">GO</a>
     <ul v-else="$route.query.step === '1'">
       <li><a href="#/psychological/underDepression">UnderDepression</a></li>
       <li><a href="#/psychological/treatmentOptions">TreatmentOptions</a></li>
@@ -30,9 +30,6 @@ export default {
     SectionIntro
   },
   methods: {
-    handleStep: function () {
-      this.step = 1
-    }
   }
 }
 </script>

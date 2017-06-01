@@ -6,7 +6,6 @@
       <li><a href="#/quiz">QUIZ</a></li>
       <li><a href="#/psychological">PSYCHOLOGICAL</a></li>
       <li><a href="#/tips">TIPS & ADVICE</a></li>
-      <li><a href="#/science">SCIENCE</a></li>
     </ul>
   </div>
 </template>

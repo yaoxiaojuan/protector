@@ -124,11 +124,11 @@
     margin: 0 5px;
   }
   .slideBox p .icon.seed{
-    background: url(../assets/seed.jpg) no-repeat center;
+    background: url(../assets/seed/seed.jpg) no-repeat center;
     background-size: 100%;
   }
   .slideBox p .icon.farmer{
-    background: url(../assets/farmer.jpg) no-repeat center;
+    background: url(../assets/farmer/farmer.jpg) no-repeat center;
     background-size: 100%;
   }
   .slidePage{

@@ -53,7 +53,7 @@ export default {
   }
   .heart{
     width: 7rem;
-    background: url(../assets/heart.png) no-repeat center;
+    background: url(../assets/farmer/heart.png) no-repeat center;
     background-size: 100%;
     &.left{
       left: 50%;
@@ -71,7 +71,7 @@ export default {
     margin-top: -5.5rem!important;
     left: 50%;
     margin-left: -2.5rem;
-    background: url(../assets/helloSeed.png) no-repeat center;
+    background: url(../assets/seed/helloSeed.png) no-repeat center;
     background-size: 100%;
     z-index: 2;
   }

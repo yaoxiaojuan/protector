@@ -66,7 +66,7 @@ export default {
             width: 100%;
             height: 100%;
             display: block;
-            background: url(../assets/farmer/menu#{$i}.jpg) no-repeat center;
+            background: url(../assets/farmer/menu#{$i}.png) no-repeat center;
             background-size: 100%;
           }
         }

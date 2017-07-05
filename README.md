@@ -1,6 +1,7 @@
-# pps
+# introduction
 
 > 关注抑郁症
+![介绍](/src/assets/common/welcome.png)
 
 ## Build Setup
 

@@ -2,8 +2,8 @@
 
 > 关注抑郁症
 
-![介绍](https://github.com/luckyYao/protector/blob/master/src/assets/common/welcom.png)
-![介绍](https://github.com/luckyYao/protector/blob/master/src/assets/common/roles.png)
+<img src="src/assets/common/welcome.png" alt="介绍" width="500">
+<img src="src/assets/common/roles.png" alt="介绍" width="500">
 
 ## Build Setup
 

@@ -3,12 +3,12 @@
     <Navigation/>
     <SectionIntro
       v-if="!$route.query.step"
-      :content="quizIntro"
+      name="quiz"
     />
     <QuizContent
       v-else-if="$route.query.step === '1'"
     />
-    <a v-if="!$route.query.step" href="#/quiz?step=1">GO</a>
+    <a class="button" v-if="!$route.query.step" href="#/quiz?step=1">GO</a>
   </div>
 </template>
 
@@ -20,8 +20,7 @@ export default {
   name: 'Quiz',
   data () {
     return {
-      step: 0,
-      quizIntro: 'Use this brief 18-question automated quiz to help you determine if your friend may need to see a mental health professional for diagnosis and treatment of depression.'
+      step: 0
     }
   },
   components: {
@@ -57,6 +56,18 @@ export default {
   &:after{
     bottom: 0;
   }
-
+  .button{
+    padding: 1rem 2rem;
+    line-height: 2rem;
+    background: #87cdc9;
+    color: #fff;
+    border-radius: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1rem;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.5rem;
+  }
 }
 </style>

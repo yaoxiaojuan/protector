@@ -2,10 +2,9 @@
   <div>
     <span
       class="iconOpen"
-      v-if="toggle"
       v-on:click="handleToggle"
     >=</span>
-    <ul v-else-if="!toggle">
+    <ul v-if="!toggle">
       <li class="iconClose" v-on:click="handleToggle">MENU</li>
       <li>
         <a class="menu1" href="#/quiz">QUIZ</a>
@@ -25,7 +24,7 @@ export default {
   name: 'Navigation',
   data () {
     return {
-      toggle: false
+      toggle: true
     }
   },
   components: {
@@ -39,9 +38,8 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.icon{
+.iconOpen{
   color: #fff;
   font-size: 2rem;
   position: absolute;

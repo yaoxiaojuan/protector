@@ -1,16 +1,22 @@
 <template>
-  <div>
+  <div class="Intro">
+    <img src="../../assets/farmer/testAndCloud.png" alt="">
     <div>Use this brief 18-question automated quiz to help you determine if your friend may need to see a mental health professional for diagnosis and treatment of depression.</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SectionIntro'
+  name: 'SectionIntro',
+  props: {}
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style lang="scss" scoped>
+.Intro{
+  img{
+    width: 60%;
+    margin: 2rem auto;
+  }
+}
 </style>

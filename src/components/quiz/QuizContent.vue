@@ -5,6 +5,7 @@
       v-for="(quiz,index) in quizs"
       :title="quiz.title"
       :index="index+1"
+      key="index"
     />
     <QuizResult
       v-else-if="step === 1"

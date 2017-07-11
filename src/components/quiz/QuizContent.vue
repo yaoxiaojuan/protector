@@ -1,6 +1,11 @@
 <template>
   <div>
-    <div v-if="step === 0">{{page}}. He/She does things slowly.</div>
+    <QuizItem
+      v-if="step === 0"
+      v-for="(quiz,index) in quizs"
+      :title="quiz.title"
+      :index="index+1"
+    />
     <QuizResult
       v-else-if="step === 1"
     />
@@ -10,16 +15,24 @@
 
 <script>
 import QuizResult from './QuizResult.vue'
+import QuizItem from './QuizItem.vue'
 export default {
   name: 'QuizContent',
   data () {
     return {
       page: 0,
-      step: 0
+      step: 0,
+      quizs: [
+        {title: 'He/She does things slowly.', result: 3},
+        {title: 'He/She does things slowly.', result: 3},
+        {title: 'He/She does things slowly.', result: 3},
+        {title: 'He/She does things slowly.', result: 3}
+      ]
     }
   },
   components: {
-    QuizResult
+    QuizResult,
+    QuizItem
   },
   methods: {
     handlePage: function () {

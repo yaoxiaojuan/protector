@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <h3>{{num}}. {{title}}</h3>
+  <div class="quizItem">
+    <h4>{{index}}. {{title}}</h4>
     <ul>
       <li>
         <span class="circle"></span>
-        <p>Not at</p>
+        <p>Not at all</p>
       </li>
       <li>
         <span class="circle"></span>
@@ -31,17 +31,14 @@
 </template>
 
 <script>
-import QuizResult from './QuizResult.vue'
 export default {
   name: 'QuizItem',
+  props: ['index', 'title'],
   data () {
     return {
       page: 0,
       step: 0
     }
-  },
-  components: {
-    QuizResult
   },
   methods: {
     handlePage: function () {
@@ -54,7 +51,38 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+.quizItem{
+  margin: 0 15px;
+  h4{
+    font-style: oblique;
+    color: #65737c;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    li{
+      list-style: none;
+      font-size: 12px;
+      text-align: center;
+      margin: 5px 2px;
+      display: inline-block;
+      .circle{
+        display: block;
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        border: 2px solid #f4ae6c;
+        margin: 0 auto 5px;
+      }
+      p{
+        margin: 0;
+      }
+    }
 
+  }
+}
 </style>

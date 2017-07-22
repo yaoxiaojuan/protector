@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,5 +22,26 @@ html, body, #app{
   width: 100%;
   height: 100%;
   margin: 0;
+}
+.button{
+  line-height: 2rem;
+  background: #87cdc9;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  &.large{
+    padding: 1rem 2rem;
+  }
+  &.italic{
+    font-style: italic;
+  }
+  &.small{
+    padding: 0.5rem 1.5rem;
+  }
 }
 </style>

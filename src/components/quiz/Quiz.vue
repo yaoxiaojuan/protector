@@ -5,10 +5,18 @@
       v-if="!$route.query.step"
       name="quiz"
     />
+    <a
+      class="button large"
+      v-if="!$route.query.step"
+      href="#/quiz?step=1"
+    >GO</a>
+
     <QuizContent
       v-else-if="$route.query.step === '1'"
     />
-    <a class="button" v-if="!$route.query.step" href="#/quiz?step=1">GO</a>
+    <QuizResult
+      v-else="$route.query.step === '2'"
+    />
   </div>
 </template>
 
@@ -16,6 +24,8 @@
 import Navigation from '../common/Navigation.vue'
 import SectionIntro from '../common/SectionIntro.vue'
 import QuizContent from './QuizContent.vue'
+import QuizResult from './QuizResult.vue'
+
 export default {
   name: 'Quiz',
   data () {
@@ -26,7 +36,8 @@ export default {
   components: {
     Navigation,
     SectionIntro,
-    QuizContent
+    QuizContent,
+    QuizResult
   },
   methods: {
     setStep: function () {
@@ -55,19 +66,6 @@ export default {
   }
   &:after{
     bottom: 0;
-  }
-  .button{
-    padding: 1rem 2rem;
-    line-height: 2rem;
-    background: #87cdc9;
-    color: #fff;
-    border-radius: 2rem;
-    text-decoration: none;
-    display: inline-block;
-    margin: 1rem;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 1.5rem;
   }
 }
 </style>

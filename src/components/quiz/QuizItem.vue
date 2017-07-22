@@ -2,29 +2,13 @@
   <div class="quizItem">
     <h4>{{index}}. {{title}}</h4>
     <ul>
-      <li>
+      <li
+        v-for="(option,index) in options"
+        v-bind:class="{'selected':index === result}"
+        v-on:click="handleClick(index)"
+      >
         <span class="circle"></span>
-        <p>Not at all</p>
-      </li>
-      <li>
-        <span class="circle"></span>
-        <p>Just a little</p>
-      </li>
-      <li>
-        <span class="circle"></span>
-        <p>Somewhat</p>
-      </li>
-      <li>
-        <span class="circle"></span>
-        <p>Moderately</p>
-      </li>
-      <li>
-        <span class="circle"></span>
-        <p>Quite a lot</p>
-      </li>
-      <li>
-        <span class="circle"></span>
-        <p>Very much</p>
+        <p>{{ option }}</p>
       </li>
     </ul>
   </div>
@@ -33,19 +17,21 @@
 <script>
 export default {
   name: 'QuizItem',
-  props: ['index', 'title'],
+  props: ['index', 'title', 'type', 'result'],
   data () {
     return {
-      page: 0,
-      step: 0
+      current: null,
+      options: [
+        '没有或很少时间',
+        '小部分时间',
+        '相当多时间',
+        '绝大部分或全部时间'
+      ]
     }
   },
   methods: {
-    handlePage: function () {
-      this.page += 1
-      if (this.page > 2) {
-        this.step = 1
-      }
+    handleClick: function (index) {
+      this.$emit('setResult', this.index - 1, index)
     }
   }
 }
@@ -62,8 +48,11 @@ export default {
   }
   ul{
     margin: 0;
-    padding: 0;
+    padding: 0 0 5px;
     text-align: left;
+    border-bottom: 1px solid #eeefef;
+    display: flex;
+    justify-content: space-around;
     li{
       list-style: none;
       font-size: 12px;
@@ -80,6 +69,29 @@ export default {
       }
       p{
         margin: 0;
+      }
+      &.selected .circle{
+        background: #f4ae6c;
+        opacity: 1!important;
+      }
+      &:nth-child(1) .circle{
+        opacity: 0.3;
+      }
+      &:nth-child(2) .circle{
+        opacity: 0.5;
+      }
+      &:nth-child(3) .circle{
+        opacity: 0.7;
+      }
+      &:nth-child(4) .circle{
+        opacity: 1;
+      }
+      &:nth-child(5) .circle{
+        border-color: #ff6d00;
+        opacity: 0.8;
+      }
+      &:nth-child(6) .circle{
+        border-color: #ff6d00;
       }
     }
 

@@ -2,20 +2,24 @@
   <div class="Quiz">
     <Navigation/>
     <SectionIntro
-      v-if="!$route.query.step"
+      v-if="step === 0"
       name="quiz"
     />
-    <a
+    <button
+      v-if="step === 0"
       class="button large"
-      v-if="!$route.query.step"
-      href="#/quiz?step=1"
-    >GO</a>
+      v-on:click="setStep(1)"
+    >GO</button>
 
     <QuizContent
-      v-else-if="$route.query.step === '1'"
+      v-else-if="step === 1"
+      v-on:setStep="setStep"
+      v-on:setResult="setResult"
     />
     <QuizResult
-      v-else="$route.query.step === '2'"
+      v-else="step"
+      setStep="setStep"
+      :result="result"
     />
   </div>
 </template>
@@ -30,7 +34,8 @@ export default {
   name: 'Quiz',
   data () {
     return {
-      step: 0
+      step: this.$route.query.step ? this.$route.query.step * 1 : 0,
+      result: 0
     }
   },
   components: {
@@ -40,8 +45,11 @@ export default {
     QuizResult
   },
   methods: {
-    setStep: function () {
-      this.step = 1
+    setStep: function (step) {
+      this.step = step
+    },
+    setResult: function (result) {
+      this.result = result
     }
   }
 }

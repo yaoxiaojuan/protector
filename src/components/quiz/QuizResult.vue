@@ -1,12 +1,14 @@
 <template>
   <div>
     <div>测试结果：健康</div>
+    <div>{{ result }}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'QuizResult'
+  name: 'QuizResult',
+  props: ['result']
 }
 </script>
 

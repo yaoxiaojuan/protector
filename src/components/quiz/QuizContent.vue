@@ -106,7 +106,6 @@ export default {
       }
       this.$emit('setStep', 2)
       this.$emit('setResult', this.result)
-      console.log(this.result)
     }
   }
 }

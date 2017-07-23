@@ -19,7 +19,7 @@ export default {
   },
   props: ['result'],
   created: function () {
-    this.score = this.result * 1.25
+    this.score = parseInt(this.result * 1.25)
     if (this.score < 53) {
       this.leval = '没有抑郁'
     } else if (this.score < 62) {

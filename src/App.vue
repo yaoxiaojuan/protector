@@ -23,6 +23,26 @@ html, body, #app{
   height: 100%;
   margin: 0;
 }
+.layout{
+  height: 100%;
+  position: relative;
+  padding: 40px 0;
+  box-sizing: border-box;
+  &:before,&:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: #dcdddd;
+  }
+  &:before{
+    top: 0;
+  }
+  &:after{
+    bottom: 0;
+  }
+}
 .button{
   line-height: 2rem;
   background: #87cdc9;

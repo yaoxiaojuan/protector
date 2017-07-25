@@ -1,5 +1,5 @@
 <template>
-  <div class="Psychological">
+  <div class="layout Psychological">
     <Navigation/>
     <SectionIntro
       v-if="step === 0"
@@ -43,24 +43,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.Psychological{
-  height: 100%;
-  position: relative;
-  padding: 40px 0;
-  box-sizing: border-box;
-  &:before,&:after{
-    position: absolute;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 40px;
-    background: #dcdddd;
-  }
-  &:before{
-    top: 0;
-  }
-  &:after{
-    bottom: 0;
-  }
-}
 </style>

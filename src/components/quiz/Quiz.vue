@@ -1,5 +1,5 @@
 <template>
-  <div class="Quiz">
+  <div class="Quiz layout">
     <Navigation/>
     <SectionIntro
       v-if="step === 0"
@@ -56,24 +56,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Quiz{
-  height: 100%;
-  position: relative;
-  padding: 40px 0;
-  box-sizing: border-box;
-  &:before,&:after{
-    position: absolute;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 40px;
-    background: #dcdddd;
-  }
-  &:before{
-    top: 0;
-  }
-  &:after{
-    bottom: 0;
-  }
-}
 </style>

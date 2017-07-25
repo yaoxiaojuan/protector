@@ -11,27 +11,33 @@
       v-on:click="setStep(1)"
     >GO</button>
 
-    <ul v-else="$route.query.step === '1'">
-      <li><a href="#/psychological/underDepression">UnderDepression</a></li>
-      <li><a href="#/psychological/treatmentOptions">TreatmentOptions</a></li>
-      <li><a href="#/psychological/faq">FAQ</a></li>
-    </ul>
+    <SectionNav
+      v-if="step === 1"
+      :nav="nav"
+    />
   </div>
 </template>
 
 <script>
 import Navigation from '../common/Navigation.vue'
 import SectionIntro from '../common/SectionIntro.vue'
+import SectionNav from '../common/SectionNav.vue'
 export default {
   name: 'Psychological',
   data () {
     return {
-      step: this.$route.query.step ? this.$route.query.step : 0
+      step: this.$route.query.step ? this.$route.query.step : 0,
+      nav: [
+        {name: 'UnderDepression', href: '#/psychological/underDepression'},
+        {name: 'TreatmentOptions', href: '#/psychological/treatmentOptions'},
+        {name: 'FAQ', href: '#/psychological/fa'}
+      ]
     }
   },
   components: {
     Navigation,
-    SectionIntro
+    SectionIntro,
+    SectionNav
   },
   methods: {
     setStep: function (step) {

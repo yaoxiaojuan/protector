@@ -23,6 +23,13 @@ html, body, #app{
   height: 100%;
   margin: 0;
 }
+a{
+  text-decoration: none;
+  color: #000;
+}
+ul{
+  list-style: none;
+}
 .layout{
   height: 100%;
   position: relative;

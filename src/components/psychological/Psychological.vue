@@ -1,11 +1,16 @@
 <template>
-  <div>
+  <div class="Psychological">
     <Navigation/>
     <SectionIntro
-      v-if="!$route.query.step"
-      :content="psychologicalIntro"
+      v-if="step === 0"
+      name="psychological"
     />
-    <a v-if="!$route.query.step" href="#/psychological?step=1">GO</a>
+    <button
+      v-if="step === 0"
+      class="button large"
+      v-on:click="setStep(1)"
+    >GO</button>
+
     <ul v-else="$route.query.step === '1'">
       <li><a href="#/psychological/underDepression">UnderDepression</a></li>
       <li><a href="#/psychological/treatmentOptions">TreatmentOptions</a></li>
@@ -21,8 +26,7 @@ export default {
   name: 'Psychological',
   data () {
     return {
-      step: this.$route.query.step,
-      psychologicalIntro: 'The most sensible way to lower rates of depression is...to spread accurate information among the general public about what depression is '
+      step: this.$route.query.step ? this.$route.query.step : 0
     }
   },
   components: {
@@ -30,11 +34,33 @@ export default {
     SectionIntro
   },
   methods: {
+    setStep: function (step) {
+      this.step = step
+    }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style lang="scss" scoped>
+.Psychological{
+  height: 100%;
+  position: relative;
+  padding: 40px 0;
+  box-sizing: border-box;
+  &:before,&:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: #dcdddd;
+  }
+  &:before{
+    top: 0;
+  }
+  &:after{
+    bottom: 0;
+  }
+}
 </style>

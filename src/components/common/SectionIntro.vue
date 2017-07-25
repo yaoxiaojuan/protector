@@ -5,6 +5,11 @@
       src="../../assets/farmer/testAndCloud.png"
       alt=""
     />
+    <img
+      v-if="name === 'psychological'"
+      src="../../assets/farmer/testAndCloud.png"
+      alt=""
+    />
     <p class="content">{{ currentIntro }}</p>
     <p class="info">{{ currentInfo }}</p>
   </div>
@@ -16,10 +21,12 @@ export default {
   data () {
     return {
       content: {
-        quiz: 'Use this brief 18-question automated quiz to help you determine if your friend may need to see a mental health professional for diagnosis and treatment of depression.'
+        quiz: 'Use this brief 18-question automated quiz to help you determine if your friend may need to see a mental health professional for diagnosis and treatment of depression.',
+        psychological: 'The most sensible way to lower rates of depression is...to spread accurate information among the general public about what depression is '
       },
       info: {
-        quiz: 'This quiz should not replace a diagnosis by a mental health professional. Quit designed by psychcentral.'
+        quiz: 'This quiz should not replace a diagnosis by a mental health professional. Quit designed by psychcentral.',
+        psychological: 'The purpose of this part is to popularize the knowledge about depression in order to reduce depression.'
       },
       currentIntro: '',
       currentInfo: ''

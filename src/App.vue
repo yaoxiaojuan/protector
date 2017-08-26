@@ -29,25 +29,27 @@ a{
 }
 ul{
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .layout{
   height: 100%;
   position: relative;
-  padding: 40px 0;
+  padding: 3em 0 0;
   box-sizing: border-box;
-  &:before,&:after{
-    position: absolute;
+  &:before{
     content: '';
     display: block;
     width: 100%;
-    height: 40px;
+    height: 3em;
     background: #dcdddd;
-  }
-  &:before{
+    position: absolute;
     top: 0;
-  }
-  &:after{
-    bottom: 0;
   }
 }
 .button{

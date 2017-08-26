@@ -22,16 +22,13 @@
 import Navigation from '../common/Navigation.vue'
 import SectionIntro from '../common/SectionIntro.vue'
 import SectionNav from '../common/SectionNav.vue'
+import Data from './Data.json'
 export default {
   name: 'Psychological',
   data () {
     return {
-      step: this.$route.query.step ? this.$route.query.step : 0,
-      nav: [
-        {name: 'UnderDepression', href: '#/psychological/underDepression'},
-        {name: 'TreatmentOptions', href: '#/psychological/treatmentOptions'},
-        {name: 'FAQ', href: '#/psychological/fa'}
-      ]
+      step: this.$route.query.step ? this.$route.query.step * 1 : 0,
+      nav: Data.nav
     }
   },
   components: {
@@ -46,7 +43,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-</style>

@@ -11,7 +11,7 @@
 
 <script>
 import Navigation from '../common/Navigation.vue'
-import Data from './Data.json'
+import Data from './psyData.json'
 
 export default {
   name: 'TreatmentOptions',

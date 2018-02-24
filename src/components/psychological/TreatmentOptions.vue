@@ -11,7 +11,7 @@
 
 <script>
 import ArticleList from '../common/ArticleList.vue'
-import Data from './data.json'
+import Data from './psyData.json'
 export default {
   name: 'TreatmentOptions',
   data () {

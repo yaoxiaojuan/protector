@@ -22,7 +22,7 @@
 import Navigation from '../common/Navigation.vue'
 import SectionIntro from '../common/SectionIntro.vue'
 import SectionNav from '../common/SectionNav.vue'
-import Data from './Data.json'
+import Data from './psyData.json'
 export default {
   name: 'Psychological',
   data () {
